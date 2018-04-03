@@ -1,0 +1,9 @@
+<!--调用管道操作，格式化字符-->
+<h2>{{ hero.name | uppercase}} Details</h2>
+<div><span>id: </span>{{hero.id}}</div>
+<div>
+  <label>name:
+    <!--[(ngModel)] 是 Angular 的双向数据绑定语法-->
+    <input [(ngModel)]="hero.name" placeholder="name">
+  </label>
+</div>
