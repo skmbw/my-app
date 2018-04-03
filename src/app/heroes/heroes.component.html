@@ -1,16 +1,9 @@
-<!--调用管道操作，格式化字符-->
-<h2>{{ hero.name | uppercase}} Details</h2>
-<div><span>id: </span>{{hero.id}}</div>
-<div>
-  <label>name:
-    <!--[(ngModel)] 是 Angular 的双向数据绑定语法-->
-    <input [(ngModel)]="hero.name" placeholder="name">
-  </label>
-</div>
 <h2>My Heroes</h2>
 <ul class="heroes">
   <!--*ngFor 是一个 Angular 的复写器（repeater）指令。 它会为列表中的每项数据复写它的宿主元素-->
-  <li *ngFor="let hero of heros">
+  <li *ngFor="let hero of heros" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
     <span class="badge">{{hero.id}}</span> {{hero.name}}
   </li>
 </ul>
+<!--这里显示详情，这个是hero-detail的选择器，这里将selectedHero属性绑定给子组件hero-detial模组中的hero属性-->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
