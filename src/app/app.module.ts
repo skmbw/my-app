@@ -7,6 +7,7 @@ import {HeroesComponent} from './heroes/heroes.component';
 import {HeroDetailComponent} from './hero-detail/hero-detail.component';
 import {HeroService} from './hero.service';
 import {MessagesComponent} from './messages/messages.component';
+import {MessageService} from './message.service';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {MessagesComponent} from './messages/messages.component';
     FormsModule  // 把 FormsModule 添加到 @NgModule 元数据的 imports 数组中，这里是该应用所需外部模块的列表
   ],
   providers: [
-    HeroService // 将HeroService提供给依赖注入系统
+    HeroService, // 将HeroService提供给依赖注入系统
+    MessageService
   ],
   bootstrap: [AppComponent]
 })
