@@ -3,6 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 [Angular5 中文文档](https://angular.cn/tutorial/toh-pt4)
 [Angular5 英文文档](https://angular.io/tutorial)
+npm update 就会更新package.json和npm吧
 
 ## Development server
 
