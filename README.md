@@ -10,6 +10,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * [Windows下 修改npm文件安装路径](https://blog.csdn.net/zwx_lucky/article/details/51006372)
 * [修改node.js默认的npm安装目录](https://blog.csdn.net/baijinwen/article/details/77961746)
 * [nodejs npm全局安装目录调整](https://blog.csdn.net/suiyuehuimou/article/details/74143436)
+* [in memory web api的url为什么是这样的](https://segmentfault.com/a/1190000009898540)
 
 ## Development server
 
