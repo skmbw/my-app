@@ -12,7 +12,7 @@ import {AppRoutingModule} from './app-routing/app-routing.module';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {HttpClientModule} from '@angular/common/http';
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
-import {InMemeryDataService} from './in-memery-data.service';
+import {InMemoryDataService} from './in-memory-data.service';
 
 
 @NgModule({
@@ -28,8 +28,11 @@ import {InMemeryDataService} from './in-memery-data.service';
     FormsModule,  // 把 FormsModule 添加到 @NgModule 元数据的 imports 数组中，这里是该应用所需外部模块的列表
     AppRoutingModule,
     HttpClientModule,
+    // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
+    // and returns simulated server responses.
+    // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
-      InMemeryDataService, {dataEncapsulation: false}
+      InMemoryDataService, {dataEncapsulation: false}
     )
   ],
   providers: [
