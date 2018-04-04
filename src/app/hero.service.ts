@@ -2,8 +2,9 @@ import {Injectable} from '@angular/core';
 import {Hero} from './hero';
 import {HEROS} from './mock-heros';
 import {Observable} from 'rxjs/Observable';
-import {ArrayObservable} from 'rxjs/observable/ArrayObservable';
+// import {ArrayObservable} from 'rxjs/observable/ArrayObservable';
 import {MessageService} from './message.service';
+import {of} from 'rxjs/observable/of'; // 这个和ArrayObservable使用一个就行，那个是具体的实现
 
 @Injectable()
 export class HeroService {
@@ -13,7 +14,8 @@ export class HeroService {
 
   getHeros(): Observable<Hero[]> {
     this.messageService.add('HeroService: fetched heroes');
-    return ArrayObservable.of(HEROS);
+    // return ArrayObservable.of(HEROS);
+    return of(HEROS);
   }
 
 }
