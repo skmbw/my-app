@@ -10,6 +10,9 @@ import {MessagesComponent} from './messages/messages.component';
 import {MessageService} from './message.service';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {DashboardComponent} from './dashboard/dashboard.component';
+import {HttpClientModule} from '@angular/common/http';
+import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
+import {InMemeryDataService} from './in-memery-data.service';
 
 
 @NgModule({
@@ -23,7 +26,11 @@ import {DashboardComponent} from './dashboard/dashboard.component';
   imports: [
     BrowserModule,
     FormsModule,  // 把 FormsModule 添加到 @NgModule 元数据的 imports 数组中，这里是该应用所需外部模块的列表
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemeryDataService, {dataEncapsulation: false}
+    )
   ],
   providers: [
     HeroService, // 将HeroService提供给依赖注入系统

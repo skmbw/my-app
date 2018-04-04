@@ -10,7 +10,7 @@ import {HeroService} from '../hero.service';
 })
 // 导出这个组件，以便在其他地方导入并使用它
 export class HeroesComponent implements OnInit {
-  selectedHero: Hero;
+  // selectedHero: Hero;
   heros: Hero[];
 
   // DI系统会将HeroService服务注入进来
@@ -23,9 +23,9 @@ export class HeroesComponent implements OnInit {
     this.getHeros();
   }
 
-  onSelect(hero: Hero): void { // : void 可以省略
-    this.selectedHero = hero;
-  }
+  // onSelect(hero: Hero): void { // : void 可以省略
+  //   this.selectedHero = hero;
+  // }
 
   getHeros() {
     this.heroService.getHeros().subscribe(heros => this.heros = heros);
