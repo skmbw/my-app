@@ -1,9 +1,15 @@
 # MyApp
 一个Angular5学习的项目。
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
-[Angular5 中文文档](https://angular.cn/tutorial/toh-pt4)
-[Angular5 英文文档](https://angular.io/tutorial)
-npm update 就会更新package.json和npm吧
+* [Angular5 中文文档](https://angular.cn/tutorial/toh-pt4)
+* [Angular5 英文文档](https://angular.io/tutorial)
+* npm update 就会更新package.json和npm吧
+* npm root -g 查看npm全局安装路径
+
+## npm的学习资料
+* [Windows下 修改npm文件安装路径](https://blog.csdn.net/zwx_lucky/article/details/51006372)
+* [修改node.js默认的npm安装目录](https://blog.csdn.net/baijinwen/article/details/77961746)
+* [nodejs npm全局安装目录调整](https://blog.csdn.net/suiyuehuimou/article/details/74143436)
 
 ## Development server
 
