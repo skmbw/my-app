@@ -11,7 +11,7 @@ import {catchError, tap} from 'rxjs/operators';
 
 // 常量要定义在最外面（类外面）
 const httpOptions = {
-  headers: new HttpHeaders({'Content-Type': 'application/json'})
+  headers: new HttpHeaders({ 'Content-Type': 'text/json' })
 };
 
 @Injectable()
@@ -22,14 +22,12 @@ export class HeroService {
               private messageService: MessageService) {
   }
 
-  getHeros(): Observable<Hero[]> {
-    this.messageService.add('HeroService: fetched heroes');
-    // return ArrayObservable.of(HEROS);
-    // return of(HEROS);
-    return this.http.get<Hero[]>(this.heroesUrl).pipe(
-      tap(heroes => this.log(`fetched heroes from url`)),
-      catchError(this.handleError('getHeroes error.', []))
-    );
+  getHeroes (): Observable<Hero[]> {
+    return this.http.get<Hero[]>(this.heroesUrl)
+      .pipe(
+        tap(heroes => this.log(`fetched heroes`)),
+        catchError(this.handleError('getHeroes', []))
+      );
   }
 
   /**

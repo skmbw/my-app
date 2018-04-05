@@ -11,7 +11,7 @@ import {HeroService} from '../hero.service';
 // 导出这个组件，以便在其他地方导入并使用它
 export class HeroesComponent implements OnInit {
   // selectedHero: Hero;
-  heros: Hero[];
+  heroes: Hero[];
 
   // DI系统会将HeroService服务注入进来
   constructor(private heroService: HeroService) {
@@ -28,7 +28,7 @@ export class HeroesComponent implements OnInit {
   // }
 
   getHeros() {
-    this.heroService.getHeros().subscribe(heros => this.heros = heros);
+    this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes);
     // this.heros = this.heroService.getHeros();
   }
 
@@ -39,12 +39,12 @@ export class HeroesComponent implements OnInit {
     }
     this.heroService.addHero({name} as Hero)
       .subscribe(hero => {
-        this.heros.push(hero);
+        this.heroes.push(hero);
       });
   }
 
   delete(hero: Hero): void {
-    this.heros = this.heros.filter(h => h !== hero);
+    this.heroes = this.heroes.filter(h => h !== hero);
     this.heroService.deleteHero(hero).subscribe();
   }
 }

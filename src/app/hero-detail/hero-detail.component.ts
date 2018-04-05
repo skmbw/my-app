@@ -11,7 +11,7 @@ import {Location} from '@angular/common';
 })
 export class HeroDetailComponent implements OnInit {
   //  带@Input() 装饰器的 hero 属性。
-  // @Input()
+  @Input()
   hero: Hero;
 
   constructor(private route: ActivatedRoute, // 保存着到这个 HeroDetailComponent 实例的路由信息。 这个组件对从 URL 中提取的路由参数感兴趣。 其中的 id 参数就是要现实的英雄的 id
