@@ -1,5 +1,8 @@
 import {Hero} from './hero';
 
+const hero: Hero = new Hero();
+hero.name = 'yinlei';
+hero.id = 11;
 export const HEROS: Hero[] = [
   {id: 1, name: '李世民'},
   {id: 2, name: '李元霸'},
@@ -10,5 +13,6 @@ export const HEROS: Hero[] = [
   {id: 7, name: '狄仁杰'},
   {id: 8, name: '李元芳'},
   {id: 9, name: '张柬之'},
-  {id: 10, name: '房玄龄'}
+  {id: 10, name: '房玄龄'},
+  hero
 ];

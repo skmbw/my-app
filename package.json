@@ -21,13 +21,14 @@
     "@angular/platform-browser": "^5.2.9",
     "@angular/platform-browser-dynamic": "^5.2.9",
     "@angular/router": "^5.2.9",
-    "angular-in-memory-web-api": "^0.6.0",
+    "angular-in-memory-web-api": "~0.5.0",
     "core-js": "^2.5.4",
+    "protobufjs": "^6.8.8",
     "rxjs": "^5.5.8",
     "zone.js": "^0.8.25"
   },
   "devDependencies": {
-    "@angular/cli": "~1.7.3",
+    "@angular/cli": "^1.7.4",
     "@angular/compiler-cli": "^5.2.9",
     "@angular/language-service": "^5.2.9",
     "@types/jasmine": "~2.8.3",
