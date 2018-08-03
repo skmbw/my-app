@@ -2,7 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {HeroService} from '../hero.service';
 import {Hero} from '../hero';
 import {helloworld} from '../bundle';
+import {helloworld as hh} from '../grpc-namespaces';
 import HelloRequest = helloworld.HelloRequest;
+import {clientFactory} from 'rxjs-grpc';
 
 @Component({
   selector: 'app-dashboard',
@@ -31,6 +33,16 @@ export class DashboardComponent implements OnInit {
     console.log(msg.length);
     const result = HelloRequest.decode(msg);
     console.log(result);
+
+    // type ClientFactory = hh.ClientFactory;
+    // const Services = clientFactory<ClientFactory>('helloworld.proto', 'helloworld');
+    //
+    // const services = new Services('localhost:50051');
+    // const greeter = services.getGreeter();
+    //
+    // greeter.sayHello({ name: 'world' }).forEach(response => {
+    //   console.log(`Greeting: ${response.message}`);
+    // });
   }
 
   getHeroes() {
