@@ -12,6 +12,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * [nodejs npm全局安装目录调整](https://blog.csdn.net/suiyuehuimou/article/details/74143436)
 * [in memory web api的url为什么是这样的](https://segmentfault.com/a/1190000009898540)
 
+## protobufjs的使用
+* pbjs -t static-module -w commonjs -o bundle.js helloworld.proto
+* pbts -o bundle.d.ts bundle.js
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
